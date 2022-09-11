@@ -50,13 +50,7 @@ public class Truck {
         return truck;
     }
 
-    @Override
-    public String toString(){
-        return " " + id +
-                " | " + name +
-                " | " + driver +
-                " | " + state;
-    }
+
 }
 
 enum State{

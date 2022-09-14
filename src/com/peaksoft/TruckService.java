@@ -15,7 +15,7 @@ import java.util.Scanner;
 import static com.peaksoft.Main.*;
 
 public class TruckService {
-    public static void change(Truck[] truck , Driver[] driver) throws MyExeption {
+    public static void change(Truck[] truck , Driver[] driver) {
 
         for (int i = 0; i < truck.length; i++) {
             int truckNum = scan.nextInt();
@@ -48,11 +48,6 @@ public class TruckService {
                 case 3 -> startRepair(choose);
             }
 
-        }
-    }
-    public static void exception(int num) throws MyExeption{
-        if(num > 3 || num < 0){
-            throw new MyExeption("Неверный номер");
         }
     }
     public static void startRepair(Truck truck){

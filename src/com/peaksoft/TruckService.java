@@ -15,17 +15,18 @@ import java.util.Scanner;
 import static com.peaksoft.Main.*;
 
 public class TruckService {
-        static String truckName;
-        static String driverName;
+    public static void change(Truck[] truck , Driver[] driver) throws MyExeption {
 
-        static Driver driver = new Driver();
-        static String aa;
-    public static void change(Truck[] truck , Driver[] driver){
         for (int i = 0; i < truck.length; i++) {
             int truckNum = scan.nextInt();
+
             if (truckNum == 0) {
                 break;
+            } else if(truckNum < 0 || truckNum >3){
+                System.out.println("Неверный номер");
+                break;
             }
+
             Truck choose = new Truck();
             for (Truck truck1 : truck) {
                 if (truck1.getId() == truckNum) {
@@ -46,6 +47,12 @@ public class TruckService {
                 case 2 -> startDrive(choose, driver);
                 case 3 -> startRepair(choose);
             }
+
+        }
+    }
+    public static void exception(int num) throws MyExeption{
+        if(num > 3 || num < 0){
+            throw new MyExeption("Неверный номер");
         }
     }
     public static void startRepair(Truck truck){

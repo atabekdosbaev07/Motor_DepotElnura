@@ -18,7 +18,7 @@ public class Main {
     public static final Path WRITE_PATH_DRIVERS = Paths.get("./Drive.json");
     public static Scanner scan = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Truck[] trucks = {
                 Truck.met(1, "Renault Magnum", "", State.BASE),

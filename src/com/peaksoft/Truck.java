@@ -50,11 +50,17 @@ public class Truck {
         return truck;
     }
 
-
+    @Override
+    public String toString() {
+        return  " \nId    | " + id +
+                " \nName  | " + name +
+                " \nDriver| " + driver +
+                " \nState | " + state;
+    }
 }
 
 enum State{
     BASE,
-    REMOTE,
+    ROUTE,
     REPAIR;
 }
